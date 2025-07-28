@@ -19,6 +19,43 @@ This project documents the complete network infrastructure evolution for Castle 
 
 ### 🌐 Phase 1: IPv4 Multi-Floor Foundation
 
+## Network Topology
+
+phase1-logical-topology.png
+
+## Configuration Files
+
+### Router Configuration: 
+
+Mian-Castle-Router_running-config.txt
+
+### Switch Configurations:
+Floor 1 Switch1: Sales-Switch1_running-config.txt
+
+Floor 1 Switch1: Sales-Switch2_running-config.txt
+
+Floor 2 Switch: Billing-Switch_running-config.txt
+
+Floor 3 Switch: Executive-Switch_running-config.txt
+
+
+## Network Validation and Testing
+
+### Basic Ping Connectivity: 
+
+basic-ping-test.png
+
+### Inter-Subnet Ping Connectivity: 
+
+inter-subnet-ping-test(01).png
+
+inter-subnet-ping-test(02).png
+
+
+## Packet Tracer Files
+
+IPv4 Multi-Floor.pkt
+
 ### 🔄 Phase 2: IPv6 Single-Floor Modernization
 
 ## 🛠️ Technical Achievements
