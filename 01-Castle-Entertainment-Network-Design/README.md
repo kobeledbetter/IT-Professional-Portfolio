@@ -21,40 +21,48 @@ This project documents the complete network infrastructure evolution for Castle 
 
 ## Network Topology
 
-phase1-logical-topology.png
+*Logical Netowork Topology Concept Design*
+
+![IPv4-Logical-Topology](01-Castle-Entertainment-Network-Design/Network-Topology/IPv4-Logical-Topology.png)
 
 ## Configuration Files
 
 ### Router Configuration: 
 
-Mian-Castle-Router_running-config.txt
+Main Router: [Mian-Castle-Router_running-config.txt](01-Castle-Entertainment-Network-Design/Configurations/Mian-Castle-Router_running-config.txt)
 
 ### Switch Configurations:
-Floor 1 Switch1: Sales-Switch1_running-config.txt
+Floor 1 Switch1: [Sales-Switch1_running-config.txt](01-Castle-Entertainment-Network-Design/Configurations/Sales-Switch1_running-config.txt)
 
-Floor 1 Switch1: Sales-Switch2_running-config.txt
+Floor 1 Switch2: [Sales-Switch2_running-config.txt](01-Castle-Entertainment-Network-Design/Configurations/Sales-Switch2_running-config.txt)
 
-Floor 2 Switch: Billing-Switch_running-config.txt
+Floor 2 Switch: [Billing-Switch_running-config.txt](01-Castle-Entertainment-Network-Design/Configurations/Billing-Switch_running-config.txt)
 
-Floor 3 Switch: Executive-Switch_running-config.txt
+Floor 3 Switch: [Executive-Switch_running-config.txt](01-Castle-Entertainment-Network-Design/Configurations/Executive-Switch_running-config.txt)
 
 
 ## Network Validation and Testing
 
 ### Basic Ping Connectivity: 
 
-basic-ping-test.png
+*Testing Connectivity Between PCs in Same Subnet*
+
+![basic-ping-test.png](01-Castle-Entertainment-Network-Design/Validation-Testing/basic-ping-test.png)
 
 ### Inter-Subnet Ping Connectivity: 
 
-inter-subnet-ping-test(01).png
+*Testing Connectivity Between PCs in Different Subnets*
 
-inter-subnet-ping-test(02).png
+![inter-subnet-ping-test(01).png](01-Castle-Entertainment-Network-Design/Validation-Testing/inter-subnet-ping-test(01).png)
+
+![inter-subnet-ping-test(02).png](01-Castle-Entertainment-Network-Design/Validation-Testing/inter-subnet-ping-test(02).png)
 
 
 ## Packet Tracer Files
 
-IPv4 Multi-Floor.pkt
+*Lab Simulation File*
+
+[IPv4-Multi-Floor.pkt](01-Castle-Entertainment-Network-Design/Packet-Tracer_File/IPv4-Multi-Floor.pkt)
 
 ### 🔄 Phase 2: IPv6 Single-Floor Modernization
 
