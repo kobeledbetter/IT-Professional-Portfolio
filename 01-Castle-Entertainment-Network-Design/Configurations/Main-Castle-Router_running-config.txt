@@ -1,1 +1,116 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname Castle-Main-Router
+!
+!
+!
+enable secret 5 $1$mERr$d0ZDLOf2zY7hmqXWW9P731
+!
+!
+ip dhcp excluded-address 192.168.9.1
+ip dhcp excluded-address 192.168.9.33
+ip dhcp excluded-address 192.168.9.49
+ip dhcp excluded-address 192.168.9.65
+ip dhcp excluded-address 192.168.9.60
+!
+ip dhcp pool SALES
+ network 192.168.9.0 255.255.255.224
+ default-router 192.168.9.1
+ dns-server 8.8.8.8
+ip dhcp pool ADMIN
+ network 192.168.9.32 255.255.255.240
+ default-router 192.168.9.33
+ dns-server 8.8.8.8
+ip dhcp pool EXECUTIVE
+ network 192.168.9.48 255.255.255.240
+ default-router 192.168.9.49
+ dns-server 8.8.8.8
+ip dhcp pool RICHARD
+ network 192.168.9.64 255.255.255.240
+ default-router 192.168.9.65
+ dns-server 8.8.8.8
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2811/K9 sn FTX1017EM32-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+no ip domain-lookup
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ description Sales Department - Floor 1
+ ip address 192.168.9.1 255.255.255.224
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ description Administration and Billing - Floor 2
+ ip address 192.168.9.33 255.255.255.240
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ description Executive Staff - Floor 3
+ ip address 192.168.9.49 255.255.255.240
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/1
+ description Richards Private Network - Floor 3
+ ip address 192.168.9.65 255.255.255.240
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ password 7 082243401A16091243595F
+ login
+!
+line aux 0
+!
+line vty 0 4
+ password 7 08354942071C11464058
+ login
+!
+!
+!
+end
 
