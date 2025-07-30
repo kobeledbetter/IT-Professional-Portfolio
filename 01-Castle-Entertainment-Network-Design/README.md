@@ -29,7 +29,7 @@ This project documents the complete network infrastructure evolution for Castle 
 
 ### Router Configuration: 
 
-Main Router: [Mian-Castle-Router_running-config.txt](Configurations/Mian-Castle-Router_running-config.txt)
+Main Router: [Mian-Castle-Router_running-config.txt](Configurations/Main-Castle-Router_running-config.txt)
 
 ### Switch Configurations:
 Floor 1 Switch1: [Sales-Switch1_running-config.txt](Configurations/Sales-Switch1_running-config.txt)
@@ -47,7 +47,7 @@ Floor 3 Switch: [Executive-Switch_running-config.txt](Configurations/Executive-S
 
 *Testing Connectivity Between PCs in Same Subnet*
 
-![basic-ping-test](Validation-Testing/Basic-Ping-Test.png)
+![basic-ping-test(01)](Validation-Testing/Basic-Ping-Test(01).png)
 
 ### Inter-Subnet Ping Connectivity: 
 
@@ -65,6 +65,45 @@ Floor 3 Switch: [Executive-Switch_running-config.txt](Configurations/Executive-S
 [IPv4-Multi-Floor.pkt](Packet-Tracer_File/IPv4-Multi-Floor.pkt)
 
 ### 🔄 Phase 2: IPv6 Single-Floor Modernization
+
+## Network Topology
+
+*Logical Netowork Topology Concept Design*
+
+![IPv6-Logical-Topology](Network-Topology/IPv6-Logical-Topology.png)
+
+## Configuration Files
+
+### Router Configuration: 
+
+Main Router: [Castle-Router_running-config.txt](Configurations/Castle-Router_running-config.txt)
+
+### Switch Configurations:
+
+Main Switch: [Sales-Switch1_running-config.txt](Configurations/Sales-Switch1_running-config.txt)
+
+## Network Validation and Testing
+
+### Basic Ping Connectivity: 
+
+*Testing Connectivity Between PCs in Same Subnet*
+
+![basic-ping-test(02)](Validation-Testing/Basic-Ping-Test(02).png)
+
+### Inter-Subnet Ping Connectivity: 
+
+*Testing Connectivity Between PCs in Different Subnets*
+
+![inter-subnet-ping-test(03)](Validation-Testing/Inter-Subnet-Ping-Test(03).png)
+
+![inter-subnet-ping-test(04)](Validation-Testing/Inter-Subnet-Ping-Test(04).png)
+
+
+## Packet Tracer Files
+
+*Lab Simulation File*
+
+[IPv6-Single-Floor.pkt](Packet-Tracer_File/IPv6-Multi-Floor.pkt)
 
 ## 🛠️ Technical Achievements
 
