@@ -1,0 +1,130 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Castle-Router
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+ipv6 unicast-routing
+!
+no ipv6 cef
+!
+ipv6 dhcp pool SALES_POOL
+ address prefix 2001:DADA:DADA:9990::/64 lifetime 172800 86400
+ dns-server 2001:DADA:DADA:9990::1
+ domain-name castle-sales.local
+!
+ipv6 dhcp pool ADMIN_POOL
+ address prefix 2001:DADA:DADA:9991::/64 lifetime 172800 86400
+ dns-server 2001:DADA:DADA:9991::1
+ domain-name castle-admin.local
+!
+ipv6 dhcp pool RECEPTION_POOL
+ address prefix 2001:DADA:DADA:9992::/64 lifetime 172800 86400
+ dns-server 2001:DADA:DADA:9992::1
+ domain-name castle-reception.local
+!
+ipv6 dhcp pool PRIVATE_POOL
+ address prefix 2001:DADA:DADA:9993::/64 lifetime 172800 86400
+ dns-server 2001:DADA:DADA:9993::1
+ domain-name castle-private.local
+!
+!
+!
+!
+license udi pid CISCO2811/K9 sn FTX10172LBL-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.10
+ description "Sales Department"
+ encapsulation dot1Q 10
+ no ip address
+ ipv6 address 2001:DADA:DADA:9990::1/64
+ ipv6 enable
+ ipv6 dhcp server SALES_POOL
+!
+interface FastEthernet0/0.20
+ description "Administration and Billing"
+ encapsulation dot1Q 20
+ no ip address
+ ipv6 address 2001:DADA:DADA:9991::1/64
+ ipv6 enable
+ ipv6 dhcp server ADMIN_POOL
+!
+interface FastEthernet0/0.30
+ description "Reception"
+ encapsulation dot1Q 30
+ no ip address
+ ipv6 address 2001:DADA:DADA:9992::1/64
+ ipv6 enable
+ ipv6 dhcp server RECEPTION_POOL
+!
+interface FastEthernet0/0.40
+ description "Richard Private Network"
+ encapsulation dot1Q 40
+ no ip address
+ ipv6 address 2001:DADA:DADA:9993::1/64
+ ipv6 enable
+ ipv6 dhcp server PRIVATE_POOL
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
